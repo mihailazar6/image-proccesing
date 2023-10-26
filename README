@@ -1,0 +1,24 @@
+2023    
+Lazar Mihai - 312CC 
+
+Timp de lucru - 12 ore
+    
+    Principiul algoritmului constă în împărțirea imaginii în patru părți egale 
+și verificarea dacă media culorilor pixelilor din acea zonă este diferită în 
+mod semnificativ de media culorilor întregii imagini. Dacă nu, zona este 
+înlocuită cu o singură culoare, altfel este împărțită în patru zone mai mici și
+procesul este repetat până la obținerea de zone cu media culorilor uniformă. 
+În final, se obține un arbore quadtree în care fiecare nod reprezintă o zonă a 
+imaginii cu media culorilor uniformă. Această structură poate fi stocată și 
+utilizată pentru a reproduce imaginea originală.
+
+    Structurile de date utilizate sunt Pixel (o structură care conține valorile
+RGB ale unui pixel), LTree (un nod al arborelui quadtree, care conține un 
+Pixel, un câmp pentru suprafața acoperită de acel nod și patru pointeri către 
+alte noduri), LQueue (o structură de coadă folosită în algoritmul de parcugere 
+a arborelui) și Queue (un pointer către structura de coadă).
+
+    Pentru prima cerinta, am facut o parcugere DFS a arborelui, iar pentru 
+a doua cerinta, o parcurgere BFS. Pentru cerinta 3 am folosit atat BFS (pt 
+alcatuirea arborelui) si DFS pentru refacerea matricei de pixeli.
+    
